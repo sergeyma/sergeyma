@@ -5,9 +5,11 @@ if( navigator.userAgent.match(/Android/i) ) {
   // use Android's redirect
   document.location = destination;   
 }   
-else {
+else if( navigator.userAgent.match(/iOS/i) ) {
   // use iOS redirect
   window.location.replace( destination );
+} else {
+  document.location = 'http://www.instagram.com/sergey';
 }
 </script>
 </html>
